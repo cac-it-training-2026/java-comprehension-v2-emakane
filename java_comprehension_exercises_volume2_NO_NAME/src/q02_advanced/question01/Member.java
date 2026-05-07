@@ -1,12 +1,14 @@
-package q01_basic.question04;
+package q02_advanced.question01;
 
-class Member {
-	//TODO ここから実装する
+import java.util.List;
+
+public class Member {
 	private int id;
-	private String password;
+	private String passwordString;
 	private String name;
 	private int age;
 	private int rank;
+	private List<Coupon> coupons;
 
 	/**
 	 * @return id
@@ -23,17 +25,17 @@ class Member {
 	}
 
 	/**
-	 * @return password
+	 * @return passwordString
 	 */
-	public String getPassword() {
-		return password;
+	public String getPasswordString() {
+		return passwordString;
 	}
 
 	/**
-	 * @param password セットする password
+	 * @param passwordString セットする passwordString
 	 */
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPasswordString(String passwordString) {
+		this.passwordString = passwordString;
 	}
 
 	/**
@@ -79,6 +81,20 @@ class Member {
 	}
 
 	/**
+	 * @return coupons
+	 */
+	public List<Coupon> getCoupons() {
+		return coupons;
+	}
+
+	/**
+	 * @param coupons セットする coupons
+	 */
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
+	}
+
+	/**
 	 * 
 	 */
 	public Member() {
@@ -86,27 +102,19 @@ class Member {
 
 	/**
 	 * @param id
-	 * @param password
+	 * @param passwordString
 	 * @param name
 	 * @param age
 	 * @param rank
+	 * @param coupons
 	 */
-	public Member(int id, String password, String name, int age, int rank) {
+	public Member(int id, String passwordString, String name, int age, int rank, List<Coupon> coupons) {
 		this.id = id;
-		this.password = password;
+		this.passwordString = passwordString;
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
-	}
-
-	public void showMember() {
-		System.out.println("***MEMBER DATE***");
-		System.out.println("id:" + id);
-		System.out.println("password:" + password);
-		System.out.println("name:" + name);
-		System.out.println("age:" + age);
-		System.out.println("rank:" + rank);
-		System.out.println("*****************");
+		this.coupons = coupons;
 	}
 
 }
